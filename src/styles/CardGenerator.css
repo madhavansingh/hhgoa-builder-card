@@ -1,0 +1,218 @@
+/* ── Generator Container ── */
+.generator-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Base Step Animations ── */
+.step-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   STEP 1: HERO & BUILDER DETAILS (LANDING PAGE)
+   Max Width: 580px - 620px for ideal breathing room
+───────────────────────────────────────────────────────────────────── */
+.step-form-view {
+  max-width: 600px;
+  padding-top: 16px;
+}
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  color: var(--color-brand-green);
+  margin: 0 0 10px 0;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.hero-subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(0.92rem, 2vw, 1.05rem);
+  color: #4a5568;
+  margin: 0 0 18px 0;
+  max-width: 520px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* Playful Feature Chips */
+.hero-chips-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-chip {
+  background: #ffffff;
+  color: var(--color-brand-green);
+  border: 1px solid rgba(6, 55, 37, 0.18);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(6, 55, 37, 0.04);
+  cursor: default;
+}
+
+.hero-chip:hover {
+  background: var(--color-brand-yellow);
+  border-color: var(--color-brand-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 55, 37, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   LOADING STATE (NO SPINNERS - LINEAR PROGRESS FILL)
+───────────────────────────────────────────────────────────────────── */
+.step-loading-view {
+  max-width: 480px;
+  padding: 48px 0;
+}
+
+.loading-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(6, 55, 37, 0.15);
+  border-radius: 24px;
+  padding: 44px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 36px rgba(6, 55, 37, 0.06);
+}
+
+.loading-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--color-brand-green);
+  margin: 0 0 8px 0;
+}
+
+.loading-message {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin: 0 0 24px 0;
+  font-weight: 600;
+  min-height: 1.4em;
+}
+
+.loading-progress-track {
+  width: 100%;
+  max-width: 280px;
+  height: 8px;
+  background: var(--color-brand-cream);
+  border: 1.5px solid var(--color-brand-green);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-progress-fill {
+  height: 100%;
+  background: var(--color-brand-green);
+  border-radius: 10px;
+  width: 100%;
+  animation: fillProgress 0.85s ease-in-out forwards;
+}
+
+@keyframes fillProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   STEP 2: GENERATED PASS VIEW
+───────────────────────────────────────────────────────────────────── */
+.step-card-view {
+  max-width: 860px;
+}
+
+.success-badge-row {
+  margin-bottom: 20px;
+}
+
+.success-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e6f4ea;
+  border: 1.5px solid #2e7d32;
+  color: #1b5e20;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.pass-card-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+/* Action Buttons Row */
+.pass-actions-row {
+  width: 100%;
+  max-width: 780px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .step-form-view {
+    max-width: 100%;
+  }
+
+  .step-card-view {
+    max-width: 100%;
+  }
+
+  .hero-chips-row {
+    gap: 6px;
+  }
+
+  .pass-actions-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

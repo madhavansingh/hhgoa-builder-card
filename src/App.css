@@ -1,0 +1,173 @@
+:root {
+  --color-brand-green: #063725;
+  --color-brand-green-hover: #0a4f36;
+  --color-brand-yellow: #feea00;
+  --color-brand-pink: #e52b50;
+  --color-brand-cream: #fff8eb;
+  --color-brand-cream-card: #ffffff;
+  --color-brand-border: #063725;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-green);
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-brand-cream);
+  /* Subtle cream dot pattern background */
+  background-image: 
+    radial-gradient(rgba(6, 55, 37, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(6, 55, 37, 0.12) 1px, var(--color-brand-cream) 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* ── Official Minimal Header ── */
+.app-header {
+  width: 100%;
+  background: var(--color-brand-green);
+  color: var(--color-brand-cream);
+  border-bottom: 3.5px solid var(--color-brand-yellow);
+  padding: 16px 24px;
+  box-shadow: 0 4px 16px rgba(6, 55, 37, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.palm-badge-icon {
+  font-size: 1.6rem;
+  background: var(--color-brand-yellow);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-brand-green);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--color-brand-yellow);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.8rem;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.header-date-badge {
+  background: rgba(254, 234, 0, 0.12);
+  border: 1.5px solid var(--color-brand-yellow);
+  color: var(--color-brand-yellow);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ── Main Body Container ── */
+.app-body {
+  flex: 1;
+  padding: 36px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Minimal Footer ── */
+.app-footer {
+  text-align: center;
+  padding: 18px 20px;
+  background: var(--color-brand-green);
+  color: var(--color-brand-cream);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  border-top: 2px solid var(--color-brand-yellow);
+  letter-spacing: 0.02em;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 640px) {
+  .app-header {
+    padding: 14px 16px;
+  }
+
+  .header-brand {
+    gap: 10px;
+  }
+
+  .palm-badge-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+
+  .brand-title {
+    font-size: 1.02rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .header-date-badge {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+
+  .app-body {
+    padding: 20px 12px;
+  }
+}
