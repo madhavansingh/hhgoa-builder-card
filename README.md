@@ -1,66 +1,59 @@
 # Hacker Goa House Builder Card Generator
 
-A web application that allows builders to generate a personalized social pass for Hacker House Goa 2026. Users can upload a photo, enter their details, and export a high-resolution PNG pass ready for sharing.
+🌴 Create your personalized Hacker Goa House Builder Card in seconds.
 
-The application automatically assigns themed attributes including Builder Class, Beach Bag items, a unique Builder ID, and a generated QR code overlay.
+---
+
+Upload your photo, enter your name and stack, and generate a custom social card for Hacker House Goa 2026. Packed with beach vibes, random builder stats, and high-res PNG export.
 
 ---
 
 ## Features
 
-- Custom photo upload with real-time positioning and zoom controls
-- Automatic Builder Class and Beach Bag attribute generation
-- High-resolution PNG export
-- Direct sharing to X (Twitter) with pre-formatted post copy
-- Responsive design tailored for mobile and desktop screens
+📸 **Upload & Position Photo**  
+Add your photo with instant circular crop preview, drag positioning, and zoom controls.
+
+🌊 **Random Builder Class**  
+Every card gets a unique class and matching sticker—from *Cache Raider* to *Terminal Surfer*.
+
+🏖 **Beach Bag Essentials**  
+Packed with three random items for your Goa journey, from *Coffee & VS Code* to *Feni & Rust*.
+
+🪪 **Builder ID & QR Code**  
+Automatic unique Builder ID stamping and QR code generation on every pass.
+
+🚀 **Share to X**  
+One-click export that downloads your pass and opens a pre-formatted X post ready to publish.
+
+📱 **Responsive Design**  
+Smooth two-step experience designed to look great on desktop, tablet, and mobile screens.
 
 ---
 
 ## Preview
 
-Add screenshots here.
+Placeholders for screenshots:
+
+- **Landing Page** (Step 1 form)
+- **Generated Builder Card** (Step 2 view)
+- **Mobile View**
 
 ---
 
 ## Tech Stack
 
-- React 18
-- Vite
-- JavaScript (ES6+)
-- HTML5 & CSS3
-- html-to-image
-- qrcode.react
+| Technology | Role |
+| :--- | :--- |
+| **React 18** | UI component framework |
+| **Vite** | Fast frontend build tool |
+| **JavaScript** | Core application logic |
+| **CSS3** | Custom responsive styling |
+| **html-to-image** | High-resolution PNG export |
+| **qrcode.react** | QR code generation |
 
 ---
 
-## Getting Started
-
-Clone the repository and install dependencies to run the app locally:
-
-```bash
-git clone https://github.com/nryadav18/smart-id-generator.git
-cd smart-id-generator
-npm install
-npm run dev
-```
-
-Open `http://localhost:5173` in your browser to view the application.
-
----
-
-## Build
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-The output files will be generated in the `dist` directory.
-
----
-
-## Folder Structure
+## Project Structure
 
 ```text
 public/
@@ -75,20 +68,34 @@ src/
 
 ---
 
+## Local Setup
+
+Run the project locally in three quick steps:
+
+```bash
+git clone https://github.com/nryadav18/smart-id-generator.git
+cd smart-id-generator
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
+---
+
 ## Customization
 
-- **Card Template**: The background template artwork is stored at `public/idCardTemplate.png`.
-- **Sticker Assets**: Class stickers are loaded dynamically from `public/stickers/`.
-- **Random Data**: Builder Classes and Beach Bag item lists are configured in `src/utils/randomGenerator.js`.
+- **Card Template**: Background graphic artwork is at `public/idCardTemplate.png`.
+- **Stickers**: Class stickers are loaded from `public/stickers/`.
+- **Builder Data**: Class names and Beach Bag items can be customized in `src/utils/randomGenerator.js`.
 
 ---
 
 ## Contributing
 
-Contributions are welcome. Feel free to open an issue or submit a pull request for fixes, improvements, or feature updates.
+Found a bug or have a fun idea to make this even better?  
+Open an issue or submit a pull request. Let's build together!
 
 ---
 
-## License
-
-MIT
+See you on the beach in Goa! 🌴🌊
