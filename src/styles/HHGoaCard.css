@@ -95,35 +95,34 @@
 .hh-name-overlay {
   position: absolute;
   top: 63.607%;
-  left: 19.5%;
-  width: 61.0%;
+  left: 20.5%;
+  width: 59.0%;
   height: 6.120%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  padding: 0 10px;
+  padding: 0 6px;
   overflow: hidden;
 }
 
 .hh-name-text {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "PERANDORY CONDENSED", "Perandory Condensed", "Perandory", "Barlow Condensed", "Oswald", "League Gothic", "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
-  color: #feea00;
+  color: #fff8eb; /* Bright high-contrast warm cream */
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   text-align: center;
   white-space: nowrap;
   line-height: 1;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-  font-size: clamp(12px, 4.3cqi, 28px);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* ─────────────────────────────────────────────────────────────────────
    3. STACK / ROLE BADGE (yellow pill)
    Yellow badge clear center area: X=312..709 (left: 30.5%, width: 38.8%)
-   Text is bigger, bolder, and stays cleanly inside the printed lightning bolts!
+   Text color is Hot Pink (#e52b50) matching the reference screenshot!
 ───────────────────────────────────────────────────────────────────── */
 .hh-role-overlay {
   position: absolute;
@@ -141,11 +140,11 @@
 }
 
 .hh-role-text {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "PERANDORY CONDENSED", "Perandory Condensed", "Perandory", "Bodoni Moda", "Cinzel Decorative", "Cormorant Garamond", serif;
   font-weight: 800;
-  color: #063725;
+  color: #e52b50; /* Hot Pink matching reference screenshot */
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   text-align: center;
   white-space: nowrap;
   line-height: 1;

@@ -13,7 +13,8 @@ function scaledFontSize(str, maxChars, maxCqi, minCqi) {
   return `clamp(${minCqi}px, ${cqi.toFixed(2)}cqi, ${(maxCqi * 6).toFixed(0)}px)`;
 }
 
-const HHGoaCard = ({ cardRef, data, photoOffset, onPhotoDrag }) => {
+const HHGoaCard = ({ cardRef, ref, data, photoOffset, onPhotoDrag }) => {
+  const targetRef = ref || cardRef;
   const [isDragging, setIsDragging] = useState(false);
   const [templateDataUrl, setTemplateDataUrl] = useState("/idCardTemplate.png");
   const dragStartRef = useRef({ x: 0, y: 0 });
@@ -80,8 +81,8 @@ const HHGoaCard = ({ cardRef, data, photoOffset, onPhotoDrag }) => {
   const offsetX = photoOffset?.x ?? 0;
   const offsetY = photoOffset?.y ?? 0;
 
-  // Scale name font: up to ~15 chars → 4.3cqi, shrinks smoothly for long names so it never touches gold stars
-  const nameFontSize = scaledFontSize(name, 15, 4.3, 1.8);
+  // Scale name font: maxChars 14, maxCqi 4.2, minCqi 1.6 to ensure long names never clip
+  const nameFontSize = scaledFontSize(name, 14, 4.2, 1.6);
   // Scale role font: up to ~14 chars → 3.4cqi, gives bigger bold text while staying inside yellow badge
   const roleFontSize = scaledFontSize(stackRole, 14, 3.4, 1.9);
 
@@ -92,7 +93,7 @@ const HHGoaCard = ({ cardRef, data, photoOffset, onPhotoDrag }) => {
   return (
     <div className="hh-card-wrapper">
       <div
-        ref={cardRef}
+        ref={targetRef}
         className="hh-card-container"
         onMouseMove={handleMouseMove}
         onMouseUp={endDrag}
@@ -101,15 +102,11 @@ const HHGoaCard = ({ cardRef, data, photoOffset, onPhotoDrag }) => {
         onTouchEnd={endDrag}
       >
         {/* ── Template background ─────────────────────────────── */}
-        <div
+        <img
+          src={templateDataUrl || "/idCardTemplate.png"}
+          alt="Template background"
           className="hh-card-background"
-          style={{
-            backgroundImage: `url(${templateDataUrl})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          aria-hidden="true"
+          draggable={false}
         />
 
         {/* ── 1. Photo ────────────────────────────────────────── */}
