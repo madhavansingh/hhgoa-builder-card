@@ -76,7 +76,17 @@ function App() {
             style={{ cursor: "pointer" }}
             title="Back to Landing Page"
           >
-            <div className="palm-badge-icon">🌴</div>
+            <img
+              src="/logo-background-remove.png"
+              alt="Logo"
+              style={{
+                height: "50px",
+                width: "auto",
+                objectFit: "contain",
+                flexShrink: 0,
+                filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.2))",
+              }}
+            />
             <div className="brand-text">
               <span className="brand-title">HACKER GOA HOUSE</span>
               <span className="brand-subtitle">Builder Social Card Generator</span>
@@ -111,9 +121,22 @@ function App() {
               <ArrowLeft size={14} />
               <span>HOME</span>
             </button>
-            <div className="header-date-badge">
-              <span>28–31 OCT 2026</span>
-            </div>
+            <img
+              src="/assets/2-47.svg"
+              alt="2:47 PM Studio"
+              onClick={openLanding}
+              style={{
+                height: "50px",
+                width: "auto",
+                objectFit: "contain",
+                cursor: "pointer",
+                filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))",
+                transition: "transform 200ms ease, opacity 200ms ease",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.06)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; }}
+              title="2:47 PM Studio - Back to Home"
+            />
           </div>
         </div>
       </header>
