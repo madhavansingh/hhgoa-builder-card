@@ -12,18 +12,24 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #root {
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 100%;
   background-color: var(--color-brand-cream);
   color: var(--color-brand-green);
   font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 .app-main-container {
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   background-color: var(--color-brand-cream);
@@ -99,16 +105,50 @@ html, body {
   font-weight: 500;
 }
 
-.header-date-badge {
-  background: rgba(254, 234, 0, 0.12);
-  border: 1.5px solid var(--color-brand-yellow);
-  color: var(--color-brand-yellow);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-family: "JetBrains Mono", monospace;
+.header-logo-left {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+
+.header-logo-right {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+  transition: transform 200ms ease, opacity 200ms ease;
+  flex-shrink: 0;
+}
+
+.header-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-home-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #FEE101;
+  opacity: 0.85;
+  transition: opacity 180ms ease, transform 180ms ease;
+  -webkit-appearance: none;
+  appearance: none;
   white-space: nowrap;
 }
 
@@ -119,6 +159,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ── Minimal Footer ── */
@@ -132,6 +174,8 @@ html, body {
   font-size: 0.82rem;
   border-top: 2px solid var(--color-brand-yellow);
   letter-spacing: 0.02em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .app-footer p {
@@ -141,33 +185,46 @@ html, body {
 /* Responsive Media Queries */
 @media (max-width: 640px) {
   .app-header {
-    padding: 14px 16px;
+    padding: 10px 12px;
+  }
+
+  .header-content-inner {
+    gap: 8px;
   }
 
   .header-brand {
-    gap: 10px;
+    gap: 8px;
+    min-width: 0;
   }
 
-  .palm-badge-icon {
-    width: 36px;
+  .header-logo-left {
+    height: 38px;
+  }
+
+  .header-logo-right {
     height: 36px;
-    font-size: 1.3rem;
   }
 
   .brand-title {
-    font-size: 1.02rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 
   .brand-subtitle {
-    font-size: 0.72rem;
+    display: none;
   }
 
-  .header-date-badge {
-    padding: 4px 10px;
-    font-size: 0.75rem;
+  .header-actions-right {
+    gap: 6px;
+  }
+
+  .header-home-btn {
+    font-size: 0.72rem;
+    padding: 2px 4px;
+    gap: 4px;
   }
 
   .app-body {
-    padding: 20px 12px;
+    padding: 16px 8px;
   }
 }

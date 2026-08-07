@@ -79,42 +79,17 @@ function App() {
             <img
               src="/logo-background-remove.png"
               alt="Logo"
-              style={{
-                height: "50px",
-                width: "auto",
-                objectFit: "contain",
-                flexShrink: 0,
-                filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.2))",
-              }}
+              className="header-logo-left"
             />
             <div className="brand-text">
               <span className="brand-title">HACKER GOA HOUSE</span>
               <span className="brand-subtitle">Builder Social Card Generator</span>
             </div>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div className="header-actions-right">
             <button
               onClick={openLanding}
-              style={{
-                background: "transparent",
-                border: "none",
-                outline: "none",
-                boxShadow: "none",
-                padding: "4px 8px",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-                fontFamily: "'Space Mono', monospace",
-                fontWeight: "700",
-                fontSize: "0.8rem",
-                letterSpacing: "0.08em",
-                color: "#FEE101",
-                opacity: 0.85,
-                transition: "opacity 180ms ease, transform 180ms ease",
-                WebkitAppearance: "none",
-                appearance: "none",
-              }}
+              className="header-home-btn"
               onMouseEnter={e => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateX(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.opacity = "0.85"; e.currentTarget.style.transform = "translateX(0)"; }}
             >
@@ -125,14 +100,7 @@ function App() {
               src="/assets/2-47.svg"
               alt="2:47 PM Studio"
               onClick={openLanding}
-              style={{
-                height: "50px",
-                width: "auto",
-                objectFit: "contain",
-                cursor: "pointer",
-                filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.25))",
-                transition: "transform 200ms ease, opacity 200ms ease",
-              }}
+              className="header-logo-right"
               onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.06)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; }}
               title="2:47 PM Studio - Back to Home"

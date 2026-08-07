@@ -29,18 +29,17 @@
    Do NOT use space-between — that is the cause of the mobile gap.
    ================================================================ */
 .lp-page {
-  position: relative;
+  position: fixed;
+  inset: 0;
   width: 100%;
-  /* svh = small viewport height — correct on mobile with browser chrome */
-  height: 100svh;
-  height: 100vh; /* fallback for browsers without svh */
-  max-height: 100svh;
-  max-height: 100vh;
+  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
   background-color: var(--lp-green);
   display: flex;
   flex-direction: column;
-  /* ⚠️ NOT space-between — use flex:1 on hero to fill space */
   align-items: stretch;
   color: var(--lp-white);
   -webkit-user-select: none;
@@ -414,7 +413,9 @@
   flex-shrink: 0;
 
   padding: clamp(0.5rem, 1.3vw, 0.875rem) var(--lp-pad-x);
-  border-top: 1px solid rgba(255,255,255,0.10);
+  border: none;
+  background: transparent;
+  box-shadow: none;
   text-align: center;
 
   display: flex;
