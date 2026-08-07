@@ -11,42 +11,26 @@ const ShareButton = ({ cardRef, builderName = "Builder", builderId = "#HH-GOA-20
     const idStr = builderId ? builderId.trim() : "#HH-GOA-2026";
     const cleanId = idStr.replace(/[^a-zA-Z0-9-]/g, "");
 
-    // Construct exact requested tweet template
     const tweetText = `🌴 Built my Hacker Goa House Builder Card!\n\n👤 ${nameStr}\n🪪 Builder ID: ${idStr}\n\nExcited to build, ship, and connect with amazing builders in Goa. 🚀\n\nCreate your own Builder Card:\nhttps://hhgoa-own-id-card.vercel.app\n\n#FrameInGoa #HHGoa2026`;
-
     const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
 
-    // 1. Pre-open blank tab synchronously to prevent popup blockers
-    let xWindow = null;
-    try {
-      xWindow = window.open("about:blank", "_blank");
-    } catch (e) {
-      console.warn("Could not pre-open popup tab:", e);
-    }
+    // ✅ Open X SYNCHRONOUSLY during the user-gesture frame.
+    // Any `await` before window.open() causes browsers to detach the popup
+    // permission, resulting in the blank tab that never navigates.
+    window.open(twitterIntentUrl, "_blank", "noopener,noreferrer");
 
+    // Show guidance modal right away
+    setShowShareModal(true);
+
+    // Download the card image independently (async, after popup is safely open)
     try {
       setIsSharing(true);
-
-      // 2. Automatically generate & download high-res PNG image
       if (cardRef && cardRef.current) {
         const downloadFileName = `HH-Goa-Builder-Card-${cleanId || "Pass"}.png`;
         await exportCardToPng(cardRef.current, downloadFileName);
       }
-
-      // 3. Open X compose window
-      if (xWindow && !xWindow.closed) {
-        xWindow.location.href = twitterIntentUrl;
-      } else {
-        window.open(twitterIntentUrl, "_blank", "noopener,noreferrer");
-      }
-
-      // 4. Display lightweight user guidance modal overlay
-      setShowShareModal(true);
     } catch (err) {
-      console.error("Error in Share to X flow:", err);
-      if (xWindow && !xWindow.closed) {
-        xWindow.location.href = twitterIntentUrl;
-      }
+      console.error("Error exporting card:", err);
     } finally {
       setIsSharing(false);
     }
