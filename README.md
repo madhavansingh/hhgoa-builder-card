@@ -1,10 +1,8 @@
-# Hacker Goa House Builder Card Generator
-
 <div align="center">
 
 ![Hacker House Goa Banner](public/assets/team-gravity-leaderboard.jpg)
 
-### 🥉 **3rd Place Winner — Hacker House Goa 2026 Leaderboard**
+### **3rd Place  — Hacker House Goa 2026 Leaderboard**
 **Built with ❤️ by Team Gravity**
 
 [![Hacker House Goa](https://img.shields.io/badge/Hacker%20House-Goa%202026-FEE101?style=for-the-badge&logo=palmtree&logoColor=026834)](https://github.com/madhavansingh/hhgoa-builder-card)
@@ -32,7 +30,6 @@ At **Hacker House Goa 2026**, **Team Gravity** secured **3rd Place** on the offi
 
 | Metric | Detail |
 | :--- | :--- |
-| 🏅 **Placement** | **3rd Place (Bronze Finish 🥉)** |
 | 👥 **Team Name** | **Team Gravity** |
 | 🪪 **Pass ID** | `HHG-2026-003` |
 | 🌟 **Designation** | **All Rounder** |
