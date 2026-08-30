@@ -628,19 +628,27 @@
   }
 
   .lp-header {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
-  /* On tiny screens, hide CHECK HYPE to keep nav from crowding */
+  .lp-nav {
+    gap: clamp(0.4rem, 2.5vw, 0.875rem);
+  }
+
+  /* Make CHECK HYPE available and well-proportioned on mobile */
   .lp-check-hype-btn {
-    display: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(0.72rem, 2.8vw, 0.85rem);
+    letter-spacing: 0.06em;
+    padding: 0.4rem 0.1rem;
   }
 
-  /* Larger CREATE on mobile for tap target */
+  /* Compact CREATE on mobile so both buttons fit cleanly alongside logo */
   .lp-create-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.1rem;
-    letter-spacing: 0.1em;
+    font-size: clamp(0.75rem, 2.8vw, 0.85rem);
+    padding: 0.45rem clamp(0.65rem, 2.2vw, 0.95rem);
+    letter-spacing: 0.08em;
   }
 
   /* Stack subbar on very narrow screens */
