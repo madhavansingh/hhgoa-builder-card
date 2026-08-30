@@ -81,10 +81,6 @@ function App() {
               alt="Logo"
               className="header-logo-left"
             />
-            <div className="brand-text">
-              <span className="brand-title">HACKER GOA HOUSE</span>
-              <span className="brand-subtitle">Builder Social Card Generator</span>
-            </div>
           </div>
           <div className="header-actions-right">
             <button
@@ -93,7 +89,7 @@ function App() {
               onMouseEnter={e => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateX(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.opacity = "0.85"; e.currentTarget.style.transform = "translateX(0)"; }}
             >
-              <ArrowLeft size={14} />
+              <ArrowLeft size={18} strokeWidth={2.5} />
               <span>HOME</span>
             </button>
             <img
