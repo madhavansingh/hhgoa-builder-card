@@ -1,9 +1,9 @@
 <div align="center">
 
-![Hacker House Goa Banner](public/assets/team-gravity-leaderboard.jpg)
+# **3rd Place  — Hacker House Goa 2026 (Task1 Leaderboard)**
+# **Team Gravity**
 
-### **3rd Place  — Hacker House Goa 2026 Leaderboard**
-**Built with ❤️ by Team Gravity**
+![Hacker House Goa Banner](public/assets/team-gravity-leaderboard.jpg)
 
 [![Hacker House Goa](https://img.shields.io/badge/Hacker%20House-Goa%202026-FEE101?style=for-the-badge&logo=palmtree&logoColor=026834)](https://github.com/madhavansingh/hhgoa-builder-card)
 [![Leaderboard](https://img.shields.io/badge/Leaderboard-3rd%20Place%20🥉-FF007A?style=for-the-badge)](https://github.com/madhavansingh/hhgoa-builder-card)
